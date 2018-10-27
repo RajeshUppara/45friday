@@ -1,0 +1,28 @@
+<div class="top-bottom-padding">
+  <div fxLayout="row">
+    <div fxFlex="5" fxflex="" fxHide.sm fxHide.xs fxLayoutAlign="start start" class="padding15">
+      <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+        <span id="mySpan">HOW WE DO
+          <div class="action">
+            <div class="bar"></div>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center stretch" style="width:100%;">
+      <div fxFlex="30" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" style="background-color:#371195;color:#fff;font-weight: bold;">
+        <div class="Title">
+          <ul class="display">
+            <li *ngFor="let item of data.listitem;let i = index" (click)="toggle(item.id,i)" style="cursor:pointer;font-weight:bold"
+              [class.active]="i == selectedRow">{{item.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div fxFlex="70" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" class="box" fxLayoutAlign="center center">
+        <div class="padding15">
+          <p style="color:#2e3192;font-size:18px">{{content}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
